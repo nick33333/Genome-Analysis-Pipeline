@@ -1,4 +1,4 @@
-# Auspice Filtering and Space Complexity Plotting Code
+# Auspice Filtering and Space Complexity Plotting Code:
 <br>
 The notebook in this directory was used to: <br>
 <br>
