@@ -1,0 +1,549 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job             count    min threads    max threads
+------------  -------  -------------  -------------
+all                 1              1              1
+callPaf          1667              1              1
+end                 1              1              1
+fastas2Pafs      1667              1              1
+mergeVcfs           1              1              1
+normVcfs         1667              1              1
+paf2vcf          1667              1              1
+prepNormVcfs     1667              1              1
+sortPaf          1667              1              1
+total           10005              1              1
+
+Select jobs to execute...
+
+[Wed Jan 19 19:26:49 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCF_001611365.1_ASM161136v1_genomic.fna
+    output: intermediate/pafsamples/GCF_001611365.1_ASM161136v1_genomic.fna.paf
+    jobid: 6788
+    wildcards: sample=GCF_001611365.1_ASM161136v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:26:49 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCF_009913215.1_ASM991321v1_genomic.fna
+    output: intermediate/pafsamples/GCF_009913215.1_ASM991321v1_genomic.fna.paf
+    jobid: 8822
+    wildcards: sample=GCF_009913215.1_ASM991321v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:26:52 2022]
+Finished job 6788.
+1 of 10005 steps (0.0%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:26:52 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCA_001018805.2_ASM101880v2_genomic.fna
+    output: intermediate/pafsamples/GCA_001018805.2_ASM101880v2_genomic.fna.paf
+    jobid: 434
+    wildcards: sample=GCA_001018805.2_ASM101880v2_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:26:53 2022]
+Finished job 8822.
+2 of 10005 steps (0.0%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:26:53 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCF_019551375.1_ASM1955137v1_genomic.fna
+    output: intermediate/pafsamples/GCF_019551375.1_ASM1955137v1_genomic.fna.paf
+    jobid: 9302
+    wildcards: sample=GCF_019551375.1_ASM1955137v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:26:56 2022]
+Finished job 434.
+3 of 10005 steps (0.0%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:26:57 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCF_001019205.2_ASM101920v2_genomic.fna
+    output: intermediate/pafsamples/GCF_001019205.2_ASM101920v2_genomic.fna.paf
+    jobid: 6488
+    wildcards: sample=GCF_001019205.2_ASM101920v2_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:26:57 2022]
+Finished job 9302.
+4 of 10005 steps (0.0%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:26:57 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCA_008935395.1_ASM893539v1_genomic.fna
+    output: intermediate/pafsamples/GCA_008935395.1_ASM893539v1_genomic.fna.paf
+    jobid: 2654
+    wildcards: sample=GCA_008935395.1_ASM893539v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:01 2022]
+Finished job 6488.
+5 of 10005 steps (0.0%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:01 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCA_008935315.1_ASM893531v1_genomic.fna
+    output: intermediate/pafsamples/GCA_008935315.1_ASM893531v1_genomic.fna.paf
+    jobid: 2630
+    wildcards: sample=GCA_008935315.1_ASM893531v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:01 2022]
+Finished job 2654.
+6 of 10005 steps (0.1%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:01 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCF_001457495.1_NCTC13435_genomic.fna
+    output: intermediate/pafsamples/GCF_001457495.1_NCTC13435_genomic.fna.paf
+    jobid: 6662
+    wildcards: sample=GCF_001457495.1_NCTC13435_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:04 2022]
+Finished job 2630.
+7 of 10005 steps (0.1%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:04 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCA_000815245.1_ASM81524v1_genomic.fna
+    output: intermediate/pafsamples/GCA_000815245.1_ASM81524v1_genomic.fna.paf
+    jobid: 344
+    wildcards: sample=GCA_000815245.1_ASM81524v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:05 2022]
+Finished job 6662.
+8 of 10005 steps (0.1%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:05 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCA_019669345.1_ASM1966934v1_genomic.fna
+    output: intermediate/pafsamples/GCA_019669345.1_ASM1966934v1_genomic.fna.paf
+    jobid: 5258
+    wildcards: sample=GCA_019669345.1_ASM1966934v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:08 2022]
+Finished job 344.
+9 of 10005 steps (0.1%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:08 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCA_900620245.1_BPH2947_genomic.fna
+    output: intermediate/pafsamples/GCA_900620245.1_BPH2947_genomic.fna.paf
+    jobid: 5924
+    wildcards: sample=GCA_900620245.1_BPH2947_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:09 2022]
+Finished job 5258.
+10 of 10005 steps (0.1%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:09 2022]
+rule sortPaf:
+    input: intermediate/pafsamples/GCF_019551375.1_ASM1955137v1_genomic.fna.paf
+    output: intermediate/pafsamples/GCF_019551375.1_ASM1955137v1_genomic.fna.srt.paf
+    jobid: 9301
+    wildcards: sample=GCF_019551375.1_ASM1955137v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:11 2022]
+Finished job 9301.
+11 of 10005 steps (0.1%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:12 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCF_001558795.1_ASM155879v1_genomic.fna
+    output: intermediate/pafsamples/GCF_001558795.1_ASM155879v1_genomic.fna.paf
+    jobid: 6746
+    wildcards: sample=GCF_001558795.1_ASM155879v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:12 2022]
+Finished job 5924.
+12 of 10005 steps (0.1%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:12 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCA_008935295.1_ASM893529v1_genomic.fna
+    output: intermediate/pafsamples/GCA_008935295.1_ASM893529v1_genomic.fna.paf
+    jobid: 2624
+    wildcards: sample=GCA_008935295.1_ASM893529v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:15 2022]
+Finished job 6746.
+13 of 10005 steps (0.1%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:16 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCA_001018775.2_ASM101877v2_genomic.fna
+    output: intermediate/pafsamples/GCA_001018775.2_ASM101877v2_genomic.fna.paf
+    jobid: 428
+    wildcards: sample=GCA_001018775.2_ASM101877v2_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:16 2022]
+Finished job 2624.
+14 of 10005 steps (0.1%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:16 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCA_001278745.1_ASM127874v1_genomic.fna
+    output: intermediate/pafsamples/GCA_001278745.1_ASM127874v1_genomic.fna.paf
+    jobid: 590
+    wildcards: sample=GCA_001278745.1_ASM127874v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:19 2022]
+Finished job 428.
+15 of 10005 steps (0.1%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:20 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCA_000159535.2_ASM15953v2_genomic.fna
+    output: intermediate/pafsamples/GCA_000159535.2_ASM15953v2_genomic.fna.paf
+    jobid: 122
+    wildcards: sample=GCA_000159535.2_ASM15953v2_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:20 2022]
+Finished job 590.
+16 of 10005 steps (0.2%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:20 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCF_009911815.1_ASM991181v1_genomic.fna
+    output: intermediate/pafsamples/GCF_009911815.1_ASM991181v1_genomic.fna.paf
+    jobid: 8486
+    wildcards: sample=GCF_009911815.1_ASM991181v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:24 2022]
+Finished job 122.
+17 of 10005 steps (0.2%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:24 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCA_008934335.1_ASM893433v1_genomic.fna
+    output: intermediate/pafsamples/GCA_008934335.1_ASM893433v1_genomic.fna.paf
+    jobid: 2348
+    wildcards: sample=GCA_008934335.1_ASM893433v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:24 2022]
+Finished job 8486.
+18 of 10005 steps (0.2%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:25 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCF_001018915.2_ASM101891v2_genomic.fna
+    output: intermediate/pafsamples/GCF_001018915.2_ASM101891v2_genomic.fna.paf
+    jobid: 6470
+    wildcards: sample=GCF_001018915.2_ASM101891v2_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:28 2022]
+Finished job 6470.
+19 of 10005 steps (0.2%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:28 2022]
+rule sortPaf:
+    input: intermediate/pafsamples/GCA_900620245.1_BPH2947_genomic.fna.paf
+    output: intermediate/pafsamples/GCA_900620245.1_BPH2947_genomic.fna.srt.paf
+    jobid: 5923
+    wildcards: sample=GCA_900620245.1_BPH2947_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:28 2022]
+Finished job 2348.
+20 of 10005 steps (0.2%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:29 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCF_001558795.2_ASM155879v2_genomic.fna
+    output: intermediate/pafsamples/GCF_001558795.2_ASM155879v2_genomic.fna.paf
+    jobid: 6752
+    wildcards: sample=GCF_001558795.2_ASM155879v2_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:30 2022]
+Finished job 5923.
+21 of 10005 steps (0.2%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:30 2022]
+rule sortPaf:
+    input: intermediate/pafsamples/GCA_019669345.1_ASM1966934v1_genomic.fna.paf
+    output: intermediate/pafsamples/GCA_019669345.1_ASM1966934v1_genomic.fna.srt.paf
+    jobid: 5257
+    wildcards: sample=GCA_019669345.1_ASM1966934v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:32 2022]
+Finished job 6752.
+22 of 10005 steps (0.2%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:32 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCA_011032785.1_ASM1103278v1_genomic.fna
+    output: intermediate/pafsamples/GCA_011032785.1_ASM1103278v1_genomic.fna.paf
+    jobid: 3656
+    wildcards: sample=GCA_011032785.1_ASM1103278v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:33 2022]
+Finished job 5257.
+23 of 10005 steps (0.2%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:33 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCA_000568455.1_ASM56845v1_genomic.fna
+    output: intermediate/pafsamples/GCA_000568455.1_ASM56845v1_genomic.fna.paf
+    jobid: 254
+    wildcards: sample=GCA_000568455.1_ASM56845v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:36 2022]
+Finished job 3656.
+24 of 10005 steps (0.2%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:36 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCF_003111745.1_ASM311174v1_genomic.fna
+    output: intermediate/pafsamples/GCF_003111745.1_ASM311174v1_genomic.fna.paf
+    jobid: 7400
+    wildcards: sample=GCF_003111745.1_ASM311174v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:37 2022]
+Finished job 254.
+25 of 10005 steps (0.2%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:37 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCA_000204665.1_ASM20466v1_genomic.fna
+    output: intermediate/pafsamples/GCA_000204665.1_ASM20466v1_genomic.fna.paf
+    jobid: 140
+    wildcards: sample=GCA_000204665.1_ASM20466v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:40 2022]
+Finished job 140.
+26 of 10005 steps (0.3%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:41 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCF_017088305.1_ASM1708830v1_genomic.fna
+    output: intermediate/pafsamples/GCF_017088305.1_ASM1708830v1_genomic.fna.paf
+    jobid: 9128
+    wildcards: sample=GCF_017088305.1_ASM1708830v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:41 2022]
+Finished job 7400.
+27 of 10005 steps (0.3%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:41 2022]
+rule sortPaf:
+    input: intermediate/pafsamples/GCA_001018775.2_ASM101877v2_genomic.fna.paf
+    output: intermediate/pafsamples/GCA_001018775.2_ASM101877v2_genomic.fna.srt.paf
+    jobid: 427
+    wildcards: sample=GCA_001018775.2_ASM101877v2_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:43 2022]
+Finished job 427.
+28 of 10005 steps (0.3%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:43 2022]
+rule sortPaf:
+    input: intermediate/pafsamples/GCA_008935295.1_ASM893529v1_genomic.fna.paf
+    output: intermediate/pafsamples/GCA_008935295.1_ASM893529v1_genomic.fna.srt.paf
+    jobid: 2623
+    wildcards: sample=GCA_008935295.1_ASM893529v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:44 2022]
+Finished job 9128.
+29 of 10005 steps (0.3%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:44 2022]
+rule sortPaf:
+    input: intermediate/pafsamples/GCF_017088305.1_ASM1708830v1_genomic.fna.paf
+    output: intermediate/pafsamples/GCF_017088305.1_ASM1708830v1_genomic.fna.srt.paf
+    jobid: 9127
+    wildcards: sample=GCF_017088305.1_ASM1708830v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:45 2022]
+Finished job 2623.
+30 of 10005 steps (0.3%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:45 2022]
+rule sortPaf:
+    input: intermediate/pafsamples/GCF_001558795.1_ASM155879v1_genomic.fna.paf
+    output: intermediate/pafsamples/GCF_001558795.1_ASM155879v1_genomic.fna.srt.paf
+    jobid: 6745
+    wildcards: sample=GCF_001558795.1_ASM155879v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:46 2022]
+Finished job 9127.
+31 of 10005 steps (0.3%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:46 2022]
+rule callPaf:
+    input: intermediate/pafsamples/GCF_017088305.1_ASM1708830v1_genomic.fna.srt.paf
+    output: intermediate/pafcalls/GCF_017088305.1_ASM1708830v1_genomic.fna.var.txt
+    jobid: 9126
+    wildcards: sample=GCF_017088305.1_ASM1708830v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:47 2022]
+Finished job 6745.
+32 of 10005 steps (0.3%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:48 2022]
+rule callPaf:
+    input: intermediate/pafsamples/GCF_019551375.1_ASM1955137v1_genomic.fna.srt.paf
+    output: intermediate/pafcalls/GCF_019551375.1_ASM1955137v1_genomic.fna.var.txt
+    jobid: 9300
+    wildcards: sample=GCF_019551375.1_ASM1955137v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:49 2022]
+Finished job 9126.
+33 of 10005 steps (0.3%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:49 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCF_009769095.1_ASM976909v1_genomic.fna
+    output: intermediate/pafsamples/GCF_009769095.1_ASM976909v1_genomic.fna.paf
+    jobid: 8474
+    wildcards: sample=GCF_009769095.1_ASM976909v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:50 2022]
+Finished job 9300.
+34 of 10005 steps (0.3%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:50 2022]
+rule sortPaf:
+    input: intermediate/pafsamples/GCF_009911815.1_ASM991181v1_genomic.fna.paf
+    output: intermediate/pafsamples/GCF_009911815.1_ASM991181v1_genomic.fna.srt.paf
+    jobid: 8485
+    wildcards: sample=GCF_009911815.1_ASM991181v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:52 2022]
+Finished job 8485.
+35 of 10005 steps (0.3%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:52 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCA_012044215.1_ASM1204421v1_genomic.fna
+    output: intermediate/pafsamples/GCA_012044215.1_ASM1204421v1_genomic.fna.paf
+    jobid: 3668
+    wildcards: sample=GCA_012044215.1_ASM1204421v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:53 2022]
+Finished job 8474.
+36 of 10005 steps (0.4%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:53 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCF_003185005.1_ASM318500v1_genomic.fna
+    output: intermediate/pafsamples/GCF_003185005.1_ASM318500v1_genomic.fna.paf
+    jobid: 7412
+    wildcards: sample=GCF_003185005.1_ASM318500v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:56 2022]
+Finished job 3668.
+37 of 10005 steps (0.4%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:56 2022]
+rule fastas2Pafs:
+    input: ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna, samples/GCF_003184985.1_ASM318498v1_genomic.fna
+    output: intermediate/pafsamples/GCF_003184985.1_ASM318498v1_genomic.fna.paf
+    jobid: 7406
+    wildcards: sample=GCF_003184985.1_ASM318498v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:27:57 2022]
+Finished job 7412.
+38 of 10005 steps (0.4%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:27:57 2022]
+rule paf2vcf:
+    input: intermediate/pafcalls/GCF_019551375.1_ASM1955137v1_genomic.fna.var.txt
+    output: intermediate/vcfs/GCF_019551375.1_ASM1955137v1_genomic.fna.vcf
+    jobid: 9299
+    wildcards: sample=GCF_019551375.1_ASM1955137v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:28:00 2022]
+Finished job 7406.
+39 of 10005 steps (0.4%) done
+Select jobs to execute...
+
+[Wed Jan 19 19:28:00 2022]
+rule sortPaf:
+    input: intermediate/pafsamples/GCF_003184985.1_ASM318498v1_genomic.fna.paf
+    output: intermediate/pafsamples/GCF_003184985.1_ASM318498v1_genomic.fna.srt.paf
+    jobid: 7405
+    wildcards: sample=GCF_003184985.1_ASM318498v1_genomic.fna
+    resources: tmpdir=/tmp
+
+[Wed Jan 19 19:28:02 2022]
+Finished job 7405.
+40 of 10005 steps (0.4%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /mnt/c/Users/light/Desktop/american-education-system/lab-notes/paf-VCF/.snakemake/log/2022-01-19T192614.066114.snakemake.log
