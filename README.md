@@ -1,9 +1,9 @@
-#Contents:<br>
-<br>
-###1.) Data Visualization:<br>
+# Contents:
+
+## 1.) Data Visualization:<br>
     - Code for Parse sample metadata from NCBI Datasets to be view with MATs in Auspice<br>
     - Code for plotting the space complexity analysis data I found when comparing VCFs to Protobufs in this project<br><br>
-###2.) paf-VCF pipeline:<br>
+## 2.) paf-VCF pipeline:<br>
     - A pipeline wrapped in snakemake and a conda environment which can be used<br>
     to perform variant calling beginning with a set of sample whole genome sequences<br>
     and a reference. For now it should be assumed that it only works with unphased <br>
