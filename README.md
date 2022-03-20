@@ -1,3 +1,8 @@
+# Variant Calling Pipeline for Whole Bacterial Genome Sequences
+
+# Description:
+<img align="center" width=500px  src="images/flowchart.jpg"></img>
+
 # Contents:
 
 ## 1.) Data Visualization:
@@ -12,3 +17,6 @@
     process when long insertions were counted. This was remedied with BCFtools norm<br>
     which I still need to do more research on. A key component to this pipeline <br>
     is the Minimap2 toolkit and paftools.js by lh3.<br>
+
+# Application with UShER:
+![alt text](/images/USA(BOLDED)vsNCTC.PNG)
