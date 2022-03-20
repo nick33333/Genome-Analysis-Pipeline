@@ -29,4 +29,4 @@ Output from variant calling with this pipeline is given in the VCF file format. 
 
 <a name="app_anchor"></a>
 ![alt text](/images/USA(BOLDED)vsNCTC.PNG)
-*Auspice Visualization of a S. Aureus phylogeny composed of 1671 completed and annotated genomes and generated using UShER. Highlighted are samples from the NCTC (UK) and USA-SUR (USA) strain groups. Data collected from the NCBI Database with the NCBI Datasets toolkit.*
+*Auspice Visualization of a S. Aureus phylogeny composed of 1671 completed and annotated genomes and generated using UShER. Highlighted are samples from the NCTC (UK) and USA-SUR (USA) strain groups. USA-SUR samples are highlighted in bold blue between the 6000-8000 ticks for units of divergence (SNPs). Unbolded blue points represent NCTC (UK) samples.Placement of these UK and USA samples may display evidence of a past HGT event granting methicillin resistance to USA S. Aureus strains. In literature, USA MRSA strains descended from Europe shortly after the introuction of methicilin and evolved in parallel to Eurpoean strains. Data collected from the NCBI Database with the NCBI Datasets toolkit.*
