@@ -1,6 +1,6 @@
 # Auspice Filtering and Space Complexity Plotting Code:
 
-The notebook ```BME230A Final Project Data Visualization Notebook.ipynb``` in this directory was used to:
+The notebook ```Data Visualization Notebook.ipynb``` in this directory was used to:
 
 1. ) Parse sample metadata from NCBI Datasets metadata JSONs into CSVs  usable 
 by the Auspice Tree viewer. Features which I wanted to filter on were strains and strain groups. The files ```dataset_catalog(NCBIDS).json``` and ```first_sequence_report.jsonl``` are the typical metadata files you get when downloading with NCBI Datasets. They are in this directory for convenience.
