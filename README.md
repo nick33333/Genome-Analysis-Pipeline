@@ -6,7 +6,7 @@ This is a pipeline for performing variant calling with whole haploid genomes in 
 
 <img align="center" width=500px  src="images/flowchart.jpg"></img>
 
-*Flowchart of variant calling pipeline. Scheme was used in generating a S. Aureus Phylogeny using 1671 completed and annotated genome samples from the NCBI Database. See [Applications with UShER](#app_anchor) for more details on a test example.*
+*Flowchart of variant calling pipeline. Scheme was used in generating a S. Aureus Phylogeny of 1671 completed and annotated genome samples from the NCBI Database. See [Applications with UShER](#app_anchor) for more details on a test example.*
 
 
 # Contents:
