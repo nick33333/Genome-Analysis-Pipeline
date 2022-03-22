@@ -4,88 +4,88 @@ and calls variants.
 '''
 
 import os
+import sys
 
+'''Set samples variable'''
 samples = os.listdir("samples") # snakemake pipeline uses files in samples as input
-# print(samples)
-if "intermediate" not in os.listdir():
+
+'''Create intermediate dir if one doesn't exist'''
+if "intermediate" not in os.listdir(): # 
     os.system("mkdir intermediate")
 
+'''Check on reference fasta, create fai index if needed'''
+ref_dir = os.listdir('./ref') # Check /ref dir
+len_ref_dir = len(ref_dir)
+if len_ref_dir == 1: # Hopefully there is only the ref genome in the ref dir
+    with open('./ref/' + ref_dir[0]) as myfa: # Light check on whether or not file is in fasta format
+        if myfa.read()[0] == '>': 
+            reference = './ref/' + ref_dir[0]
+            os.system(f"samtools faidx {'./ref/' + ref_dir[0]}")
+        else:
+            print("Reference genome is not in fasta format",file = sys.stderr)
+            exit 
+elif len_ref_dir == 2: # Right number of files, check if index exists for reference
+    has_index = False
+    for f in ref_dir:
+        if '.fai' in f:
+            has_index = True
+        else:
+            reference = "ref/" + f
+    if has_index == False:
+        print("No reference genome index in /ref dir", file = sys.stderr)
+        exit
+else: # No files or too many files in ref dir
+    print("No reference genome or too many files in /ref dir", file = sys.stderr)
+    exit
+
+'''Pipeline body'''
 rule all:
     input:
         "all.txt"
     
 rule fastas2Pafs:
     input:
-        ref = "ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna", # hard coded
+        ref = reference, # hard coded
         samp = "samples/{sample}"
     output:
         "intermediate/pafsamples/{sample}.paf"
     run:
         shell("minimap2 -cx asm5 -t8 --cs {input.ref} {input.samp} > {output}")
 
-rule sortPaf:
-    input:
-        "intermediate/pafsamples/{sample}.paf"
-    output:
-        "intermediate/pafsamples/{sample}.srt.paf"
-    run:
-        shell("sort -k6,6 -k8,8n {input} > {output}"),
-        shell("rm {input}")
-
 rule callPaf:
     input:
-        "intermediate/pafsamples/{sample}.srt.paf"
+        samp = "intermediate/pafsamples/{sample}.paf",
+        ref = reference, # hard coded        
     output:
-        "intermediate/pafcalls/{sample}.var.txt"
+        "intermediate/vcfs/{sample}.vcf"
     run:
-        shell("k8 paftools.js call {input} > {output}"),
-        shell("rm {input}")
+        shell("sort -k6,6 -k8,8n {input} | paftools.js call -f {input.ref} -s {input.samp} -L10000 -l1000 - > {output}"),
+        shell("rm {input.samp}")
 
-rule paf2vcf:
-    input: 
-        "intermediate/pafcalls/{sample}.var.txt"
-    output:
-        "intermediate/vcfs/{sample}.vcf" # In order to make this, u have to wait till all input is created
-    run:
-        shell("python paf2vcf.py -i {input} -o {output}"),
-        shell("rm {input}")
-
-rule normVcfs:
+rule prepVcfs:
     input:
         "intermediate/vcfs/{sample}.vcf"
     output:
-        "intermediate/normVcfs/{sample}.norm.vcf"
-    run:
-        shell("bgzip {input}"),
-        shell("tabix -p vcf {input}.gz"),
-        shell("bcftools norm --check-ref x --fasta-ref ref/staph-aureus-ref-GCF_000013425.1_ASM1342v1_genomic.fna {input}.gz  > {output}"),
-        shell("rm {input}.gz {input}.gz.tbi")
-
-rule prepNormVcfs:
-    input:
-        "intermediate/normVcfs/{sample}.norm.vcf"
-    output:
-        "intermediate/normVcfs/{sample}.norm.vcf.gz"
+        "intermediate/vcfs/{sample}.vcf.gz"
     run:
         shell("bgzip {input} -c > {output}"),
         shell("rm {input}"),
         shell("tabix -p vcf {output}")
-        
 
 rule mergeVcfs:
     input:
-        expand("intermediate/normVcfs/{sample}.norm.vcf.gz", sample = samples)
+        expand("intermediate/vcfs/{sample}.vcf.gz", sample = samples)
     output:
         "MERGED.vcf"
     run:
-        shell("bcftools merge -O v -o {output} intermediate/normVcfs/*.norm.vcf.gz"),
-        shell("rm {input} intermediate/normVcfs/*.tbi")
+        shell("bcftools merge -O v -o {output} intermediate/vcfs/*.vcf.gz"),
+        shell("rm {input} intermediate/vcfs/*.tbi")
 
 rule end:
     input: 
         "MERGED.vcf"
     output:
-        "all.txt" # In order to make this, u have to wait till all input is created
+        "all.txt" # In order to make this, u have to wait till all input is created. Dummy final call.
     run:
         # print({input})
         shell("touch {output}")
