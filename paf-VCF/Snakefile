@@ -1,6 +1,10 @@
 '''
 Pipeline takes genome asm samples + 1 reference asm for an organism
-and calls variants.
+and calls variants. 
+
+Hyperparameters?
+- Adjust the minimum length of alignments from which to perform variant 
+calling in the callPaf rule. See the comments in that rule for more details.
 '''
 
 import os
@@ -48,19 +52,19 @@ rule fastas2Pafs:
         ref = reference, # hard coded
         samp = "samples/{sample}"
     output:
-        "intermediate/pafsamples/{sample}.paf"
+        "intermediate/pafs/{sample}.paf" # Abuses naming of .paf files a little by keeping them labeled as .fna
     run:
         shell("minimap2 -cx asm5 -t8 --cs {input.ref} {input.samp} > {output}")
 
 rule callPaf:
     input:
-        samp = "intermediate/pafsamples/{sample}.paf",
+        paf = "intermediate/pafs/{sample}.paf",
         ref = reference, # hard coded        
     output:
         "intermediate/vcfs/{sample}.vcf"
     run:
-        shell("sort -k6,6 -k8,8n {input} | paftools.js call -f {input.ref} -s {input.samp} -L10000 -l1000 - > {output}"),
-        shell("rm {input.samp}")
+        shell("sort -k6,6 -k8,8n {input.paf} | paftools.js call -f {input.ref} -s {wildcards.sample} -L50000 - > {output}"), # min alignment length to call variants is 50000 (Higher to ensure accurate call)
+        shell("rm {input.paf}")
 
 rule prepVcfs:
     input:
